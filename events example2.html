@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<center>
+<h2>JavaScript Can Validate Numeric Values Only</h2>
+
+<p>Please enter numeric values </p>
+<form name = "input values" action = "#" method = "post" onsubmit = "return(validate());">
+
+<input id = "numb" required> <br><br>
+
+
+<button type="button" onclick="myFunction()" >
+Submit
+</button>
+
+
+<p id="demo"></p>
+</center>
+
+</form>
+
+
+<script>
+function myFunction() {
+  var x, text,error;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("numb").value;
+  
+  // If x is Not a Number then display an error
+  if (isNaN(x) || x < 1 || x > 100) {
+    text = alert("Input not valid");
+  } else {
+    text = alert("Input OK");
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+
+</script>
+</body>
+</html> 
